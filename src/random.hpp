@@ -3,4 +3,6 @@
 
 std::string RandomString(int length);
 
+std::vector<int> RandomInts(int length);
+
 #endif
