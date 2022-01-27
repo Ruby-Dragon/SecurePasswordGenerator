@@ -1,6 +1,6 @@
 #ifndef _RANDOM
 #define _RANDOM
 
-std::string RandomString();
+std::string RandomString(int length);
 
 #endif

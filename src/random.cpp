@@ -1,11 +1,15 @@
 #include <string>
 #include <cstdlib>
 
-std::string RandomString()
+std::string RandomString(int length)
 {
-	std::srand(time(0));
-	int randint = std::rand() % 94 + 33;
-	char character = randint;
-	std::string fin = std::string(1, character);
+	std::string fin = std::string();
+	for (int i = 0; i < length; i++)
+	{
+		std::srand((i * 2.9) + i + time(0));
+		int randint = std::rand() % 94 + 33;
+		char character = randint;
+		fin += character;
+	}
 	return fin;
 }
