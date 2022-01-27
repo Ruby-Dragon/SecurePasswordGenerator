@@ -28,7 +28,7 @@ std::vector<int> RandomInts(int length)
 	for (int i = 0; i < length; i++)
 	{
 		std::srand((i * 2.9) + i + time(0));
-		int randint = std::rand() % 94 + 33;
+		int randint = std::rand() % 25;
 		IntArray[i] = randint;
 	}
 	return IntArray;
