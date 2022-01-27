@@ -1,5 +1,10 @@
 #include <string>
 #include <cstdlib>
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 
 std::string RandomString(int length)
 {
@@ -10,6 +15,7 @@ std::string RandomString(int length)
 		int randint = std::rand() % 94 + 33;
 		char character = randint;
 		fin += character;
+		sleep(0.008);
 	}
 	return fin;
 }
