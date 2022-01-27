@@ -7,4 +7,5 @@ fn main() {
     {
 			println!("{}", argument);
 		}
+		println!("Number to char test: {}", 65u8 as char);
 }
