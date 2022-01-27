@@ -1,5 +1,5 @@
 [package]
-name = "PasswordGen"
+name = "password_gen"
 version = "0.1.0"
 authors = ["Ruby-Dragon"]
 edition = "2018"
