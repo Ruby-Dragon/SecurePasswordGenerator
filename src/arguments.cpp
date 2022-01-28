@@ -43,4 +43,8 @@ void ParseArguments(int argc, char* argv[])
 			std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
 		}
 	}
+	else
+	{
+		std::cout << "No length specified.";
+	}
 }
