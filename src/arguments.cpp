@@ -7,10 +7,12 @@
 void ParseArguments(int argc, char* argv[])
 {
 	std::vector<std::string> ArgVector;
-	if (argc > 2)
+	//std::cout << argc << "\n";
+	if (argc >= 2)
 	{
-		for (int i = 1; i < argc -1; i++)
+		for (int i = 1; i <= argc -1; i++)
 		{
+			//std::cout << "!\n";
 			ArgVector.insert(ArgVector.end(), argv[i]);
 		}
 	}
