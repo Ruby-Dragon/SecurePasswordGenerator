@@ -1,12 +1,8 @@
 #include <string>
 #include <cstdlib>
 #include <vector>
-
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
+#include <chrono>
+#include <thread>
 
 std::string RandomString(int length)
 {
@@ -17,7 +13,7 @@ std::string RandomString(int length)
 		int randint = std::rand() % 94 + 33;
 		char character = randint;
 		fin += character;
-		sleep(0.008);
+		std::this_thread::sleep_for(std::chrono::milliseconds(8));
 	}
 	return fin;
 }
@@ -30,6 +26,7 @@ std::vector<int> RandomInts(int length)
 		std::srand((i * 2.9) + i + time(0));
 		int randint = std::rand() % 28;
 		IntArray[i] = randint;
+		std::this_thread::sleep_for(std::chrono::milliseconds(8));
 	}
 	return IntArray;
 }
