@@ -1,6 +1,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include "random.hpp"
+#include "words.hpp"
 
 void ParseArguments(int argc, char* argv[])
 {
@@ -15,10 +17,27 @@ void ParseArguments(int argc, char* argv[])
 
 	if (argc == 2)
 	{
+		int Length = stoi(ArgVector[0]);
+		if (Length <= 0)
+		{
+			std::cout << "Argument 1 needs to be an integer greater than 0.\n";
+			return;
+		}
 
+		std::cout << "Psudo-random password: " << RandomString(Length);
 	}
 	else if (argc > 2)
 	{
-		
+		int Length = stoi(ArgVector[0]);
+		if (Length <= 0)
+		{
+			std::cout << "Argument 1 needs to be an integer greater than 0.\n";
+			return;
+		}
+
+		if (ArgVector[1] == "-w" || ArgVector[1] == "-W")
+		{
+			std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
+		}
 	}
 }
