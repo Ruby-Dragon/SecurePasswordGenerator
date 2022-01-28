@@ -25,7 +25,7 @@ void ParseArguments(int argc, char* argv[])
 			std::cout << "Argument 1 needs to be an integer greater than 0.\n";
 			return;
 		}
-
+		std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
 		std::cout << "Psudo-random password: " << RandomString(Length);
 	}
 	else if (argc > 2)
@@ -39,6 +39,7 @@ void ParseArguments(int argc, char* argv[])
 
 		if (ArgVector[1] == "-w" || ArgVector[1] == "-W")
 		{
+			std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
 			std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
 		}
 	}
