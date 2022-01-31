@@ -1,3 +1,9 @@
+//GNU Public Licence v3, 2022, Ruby-Dragon
+//
+// This source is available for distribution and/or modification
+// only under the terms of the SecurePasswordGenerator Source Code License as
+// published by Ruby-Dragon. All rights reserved.
+
 #ifndef _RANDOM
 #define _RANDOM
 
