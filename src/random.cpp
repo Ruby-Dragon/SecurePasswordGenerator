@@ -3,6 +3,7 @@
 #include <vector>
 #include <chrono>
 #include <thread>
+#include "words.hpp"
 
 std::string RandomString(int length)
 {
@@ -32,26 +33,26 @@ std::string RandomString(int length, int seed)
 	return fin;
 }
 
-std::vector<int> RandomInts(int length)
+std::vector<int> RandomInts(int length, int depth)
 {
 	std::vector<int> IntArray = std::vector<int>(length);
 	for (int i = 0; i < length; i++)
 	{
 		std::srand((i * 2.9) + i + time(0));
-		int randint = std::rand() % 28;
+		int randint = std::rand() % depth;
 		IntArray[i] = randint;
 		std::this_thread::sleep_for(std::chrono::milliseconds(8));
 	}
 	return IntArray;
 }
 
-std::vector<int> RandomInts(int length, int seed)
+std::vector<int> RandomInts(int length, int seed, int depth)
 {
 	std::vector<int> IntArray = std::vector<int>(length);
 	for (int i = 0; i < length; i++)
 	{
 		std::srand((i * 2.9) + seed + time(0));
-		int randint = std::rand() % 28;
+		int randint = std::rand() % depth;
 		IntArray[i] = randint;
 		std::this_thread::sleep_for(std::chrono::milliseconds(8));
 	}
