@@ -39,8 +39,33 @@ void ParseArguments(int argc, char* argv[])
 
 		if (ArgVector[1] == "-w" || ArgVector[1] == "-W")
 		{
+			if (argc == 3)
+			{
+				std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
+				std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
+			}
+			else if (argc > 3)
+			{
+				const char * seedStr = ArgVector[1].c_str();
+				int seed = 0;
+				for (int i = 0; i < ArgVector[1].length(); i++)
+				{
+					seed += seedStr[i];
+				}
+				std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
+				std::cout << "Psudo-Randomised Words: " << RandomWord(Length, seed);
+			}
+		}
+		else
+		{
+			const char * seedStr = ArgVector[1].c_str();
+			int seed = 0;
+			for (int i = 0; i < ArgVector[1].length(); i++)
+			{
+				seed += seedStr[i];
+			}
 			std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
-			std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
+			std::cout << "Psudo-Randomised password: " << RandomString(Length, seed);
 		}
 	}
 	else

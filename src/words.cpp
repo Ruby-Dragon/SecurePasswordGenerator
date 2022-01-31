@@ -14,3 +14,14 @@ std::string RandomWord(int length)
 	}
 	return word;
 }
+
+std::string RandomWord(int length, int seed)
+{
+	std::vector<int> code = RandomInts(length, seed);
+	std::string word = "";
+	for (int i = 0; i < code.size(); i ++)
+	{
+		word += words[code[i]];
+	}
+	return word;
+}
