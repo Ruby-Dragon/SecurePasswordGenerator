@@ -2,7 +2,9 @@
 
 ###### GNU Public Licence v3, 2022, Ruby-Dragon
 
-Generate secure passwords easily
+Generate secure-ish passwords easily
+
+Not cyptographically secure.
 
 This project was made to practice CPP and keep my skills up - and to work on when i'm bored
 
