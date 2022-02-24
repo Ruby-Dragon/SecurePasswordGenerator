@@ -1,8 +1,20 @@
-//GNU Public Licence v3, 2022, Ruby-Dragon
-//
-// This source is available for distribution and/or modification
-// only under the terms of the SecurePasswordGenerator Source Code License as
-// published by Ruby-Dragon. All rights reserved.
+/*
+    SecurePasswordGenerator - Easily create randomised passwords from the terminal
+    Copyright (C) 2022  Ruby-Dragon
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 
 #include <vector>
 #include <string>
@@ -12,7 +24,7 @@
 
 void ParseArguments(int argc, char* argv[])
 {
-	//vector of aguments, because vectors are easier to deal with
+	//vector of arguments, because vectors are easier to deal with
 	std::vector<std::string> ArgVector;
 	//std::cout << argc << "\n";
 	//if there are more than 2 args, add to arg vector, but cut off exe name
@@ -38,7 +50,7 @@ void ParseArguments(int argc, char* argv[])
 		}
 		//else, output a random password
 		std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
-		std::cout << "Psudo-random password: " << RandomString(Length);
+		std::cout << "Pseudo-random password: " << RandomString(Length);
 	}
 	//if there are more than 2 args
 	else if (argc > 2)
@@ -59,7 +71,7 @@ void ParseArguments(int argc, char* argv[])
 			{
 				//output random string of words
 				std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
-				std::cout << "Psudo-Randomised Words: " << RandomWord(Length);
+				std::cout << "Pseudo-Randomised Words: " << RandomWord(Length);
 			}
 			//if there is a custom seed
 			else if (argc > 3)
@@ -75,7 +87,7 @@ void ParseArguments(int argc, char* argv[])
 				}
 				//output random string of words based on custom seed
 				std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
-				std::cout << "Psudo-Randomised Words: " << RandomWord(Length, seed);
+				std::cout << "Pseudo-Randomised Words: " << RandomWord(Length, seed);
 			}
 		}
 		//if there is no -w
@@ -90,7 +102,7 @@ void ParseArguments(int argc, char* argv[])
 			}
 			//output random string of chars based on custom seed
 			std::cout << "THIS PASSWORD WILL NOT BE SAVED!\n";
-			std::cout << "Psudo-Randomised password: " << RandomString(Length, seed);
+			std::cout << "Pseudo-Randomised password: " << RandomString(Length, seed);
 		}
 	}
 	else
