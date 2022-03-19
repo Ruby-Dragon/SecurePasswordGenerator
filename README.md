@@ -23,7 +23,7 @@ suffering with Java.
 	THE PASSWORD WILL NOT BE SAVED. Copy the password to somewhere secure, write it down, or memorize it.
 
 	Example of correct usage: "./PasswordGen 12 fhufyfn9fn98fhwejfkwenfi23ury98"
-	Another Example: 					"./PasswordGen 12 -w uifbnb89w7yfne98wehbfhfn833weg"
+	Another Example:          "./PasswordGen 12 -w uifbnb89w7yfne98wehbfhfn833weg"
 
 ## Installation:
 
