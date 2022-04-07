@@ -1,2 +1,0 @@
-language = "cpp"
-run = "g++ -o ./builds/PasswordGen ./src/*.cpp ; ./builds/PasswordGen 5 -w uei89keh3"
