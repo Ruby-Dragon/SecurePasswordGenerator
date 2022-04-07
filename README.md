@@ -33,15 +33,9 @@ suffering with Java.
 
 	If you do not have git, download the source files from github and unzip
 
-	On windows, use whatever CPP compiler your have, then put the resulting .exe file anywhere you want
-
-	On Linux or OSX, use your prefered compiler.
-
-	If you use g++, this script should work (make sure builds is a folder):
-
-		"g++ -o ./builds/PasswordGen ./src/*.cpp"
-
-	To run, go to path of executable, and use ./PasswordGen
+	To build, use cmake gui or cli. Either one works.
+	
+	To run, use ./PasswordGen (args)
 
 ## Licence:
 
