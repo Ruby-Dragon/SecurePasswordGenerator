@@ -8,9 +8,7 @@ Not cyptographically secure.
 
 This project was made to practice CPP and keep my skills up - and to work on when i'm bored
 
-Written in C++ because I decided learning Rust just 
-for this was going to kill me, and I was done
-suffering with Java.
+Written in C++ 
 
 ## Usage:
 
